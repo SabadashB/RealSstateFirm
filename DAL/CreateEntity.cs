@@ -8,7 +8,7 @@ namespace DAL
 {
     public class CreateEntity
     {
-        public static Client CreateClient(string name, string sername, string phone, string pasportData, int bankNumber)
+        public static Client CreateClient(string name, string sername, string phone, string pasportData, string bankNumber)
             => new Client(name, sername, phone, pasportData, bankNumber);
 
         public static RealEstate CreateEstate(string address, string number, string location, decimal coast, Type type, bool isArended)

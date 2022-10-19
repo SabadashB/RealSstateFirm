@@ -6,15 +6,16 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
+    [Serializable]
     public class Client
     {
-        private string _name;
-        private string _sername;
-        private string _phone;
-        private string _pasportData;
-        private int _bankNumber;
+        public string _name;
+        public string _sername;
+        public string _phone;
+        public string _pasportData;
+        public string _bankNumber;
         public Client(){}
-        public Client(string name, string sername, string phone, string pasportData, int bankNumber)
+        public Client(string name, string sername, string phone, string pasportData, string bankNumber)
         {
             _name = name;
             _sername = sername;
@@ -22,7 +23,6 @@ namespace DAL
             _pasportData = pasportData;
             _bankNumber = bankNumber;
         }
-
-        public override string ToString() => $"{_name}{_sername} | {_phone} | {_pasportData} |  {_bankNumber}";
+        public override string ToString() => $"{_name} {_sername} | {_phone} | {_pasportData} |  {_bankNumber}";
     }
 }
